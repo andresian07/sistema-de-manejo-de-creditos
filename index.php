@@ -20,6 +20,7 @@ require_once "models/creditos/CrearCreditoModel.php";
 require_once "models/creditos/CreditosModel.php";
 require_once "models/creditos/SelectAbonosModel.php";
 require_once "models/creditos/VerCreditosModel.php";
+require_once "models/creditos/datosMorososModel.php";
 
 
 //CONTROLLERS/creditos
@@ -29,6 +30,7 @@ require_once "controllers/creditos/CrearCreditoController.php";
 require_once "controllers/creditos/CreditosController.php";
 require_once "controllers/creditos/SelectAbonosController.php";
 require_once "controllers/creditos/VerCreditosController.php";
+require_once "controllers/creditos/datosMorososController.php";
 ?>
 <!doctype html>
 <html lang="en">
@@ -53,10 +55,10 @@ require_once "controllers/creditos/VerCreditosController.php";
     <header>
         <!-- place navbar here -->
         <nav class="nav justify-content-center  ">
-            <a href="index.php"><img src="imagenes/comprabacano_logo.png" alt="" width="50px" height="50px" class="rounded-circle"></a>
+            <a href="index.php"><img src="imagenes/Logo c.png" alt="" width="50px" height="50px" class="rounded-circle"></a>
             <a class="nav-link active" href="index.php?modulo=inicio" aria-current="page">INICIO</a>
             <a class="nav-link" href="index.php?modulo=clientes">CLIENTES</a>
-            <a class="nav-link" href="index.php?modulo=Vercreditos">CREDITOS</a>
+            <a class="nav-link" href="index.php?modulo=DatosMora">PERSONAS EN MORA</a>
         </nav>
     </header>
     <main>
@@ -121,6 +123,14 @@ require_once "controllers/creditos/VerCreditosController.php";
             
             case 'corregir';
             include_once "views/creditos/corregir.php";
+            break;
+
+            case 'DatosMora';
+            include_once "views/creditos/datosMorosos.php";
+            break;
+
+            case 'TablaMorosos';
+            include_once "views/creditos/tablaMorosos.php";
             break;
         }
         ?>
